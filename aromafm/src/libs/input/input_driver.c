@@ -169,6 +169,9 @@ byte INDR_init(AINPUTP me) {
   me->internal = (voidp) mi;
   /* Set Initial Value */
   mi->n = 0;
+  mi->touch_flip_x = 1;
+  mi->touch_flip_y = 1;
+  mi->touch_swap_xy = 1;
   /* Open Input Device Directory */
   DIR * dir = opendir(INDR_DEVPATH);
   
