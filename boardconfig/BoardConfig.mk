@@ -281,7 +281,7 @@ else ifeq ($(TARGET_PRODUCT), cm_exhilarate)
     BOARD_USE_B_SLOT_PROTOCOL := true
 
 #Galaxy Core Duos (i8262)
-else ifeq ($(TARGET_PRODUCT), cm_i8262)
+else ifeq ($(TARGET_PRODUCT), cm_arubaslim)
     TARGET_COMMON_NAME := Galaxy i8262
     BOOTLOADER_CMD_ARG := "download"
     TARGET_SCREEN_HEIGHT := 800
@@ -599,6 +599,13 @@ else ifeq ($(TARGET_PRODUCT), cm_protou)
 #HTC Droid Incredible 4G LTE - fireball
 else ifeq ($(TARGET_PRODUCT), cm_fireball)
     TARGET_COMMON_NAME := Droid Incredible 4G LTE
+    TARGET_SCREEN_HEIGHT := 960
+    TARGET_SCREEN_WIDTH := 540
+    BRIGHTNESS_SYS_FILE := "/sys/class/leds/lcd-backlight/brightness"
+    
+#HTC Sensation - pyramid
+else ifeq ($(TARGET_PRODUCT), cm_pyramid)
+    TARGET_COMMON_NAME := HTC Sensation
     TARGET_SCREEN_HEIGHT := 960
     TARGET_SCREEN_WIDTH := 540
     BRIGHTNESS_SYS_FILE := "/sys/class/leds/lcd-backlight/brightness"
