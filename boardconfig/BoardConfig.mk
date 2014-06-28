@@ -289,6 +289,16 @@ else ifeq ($(TARGET_PRODUCT), cm_arubaslim)
     BOARD_HAS_LOW_RESOLUTION := true
     BRIGHTNESS_SYS_FILE := "/sys/class/leds/lcd-backlight/brightness"
     BOARD_USE_B_SLOT_PROTOCOL := true
+    
+#Galaxy Grand 2 (SM-G7102)
+else ifeq ($(TARGET_PRODUCT), cm_ms013g)
+    TARGET_COMMON_NAME := Galaxy Grand 2
+    BOOTLOADER_CMD_ARG := "download"
+    KERNEL_EXFAT_MODULE_NAME := "exfat"
+    TARGET_SCREEN_HEIGHT := 1280
+    TARGET_SCREEN_WIDTH := 720
+    BRIGHTNESS_SYS_FILE := "/sys/class/leds/lcd-backlight/brightness"
+    BOARD_USE_B_SLOT_PROTOCOL := true
 
 #Galaxy S2 Skyrocket i727 - skyrocket
 else ifeq ($(TARGET_PRODUCT), cm_skyrocket)
